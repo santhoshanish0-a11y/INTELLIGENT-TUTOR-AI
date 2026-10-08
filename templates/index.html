@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Intelligent Tutor - AI learning for government exams</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- Sign in -->
+<section class="gate" id="gate">
+  <div class="gate-hero">
+    <div class="brand"><span class="brand-mark">IT</span> Intelligent Tutor</div>
+    <div>
+      <h1>Ask anything. Practise smart. Fix what's weak.</h1>
+      <p>An AI teacher for government exam preparation, with exam-style quizzes for UPSC, SSC, Banking, Railways and TNPSC.</p>
+      <div class="gate-stats">
+        <div><b id="statBank">120+</b><span>exam questions</span></div>
+        <div><b>10</b><span>subjects</span></div>
+        <div><b>24/7</b><span>available</span></div>
+      </div>
+    </div>
+    <svg class="gate-ring" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="100" r="80" fill="none" stroke="#232B63" stroke-width="14"/>
+      <circle class="arc" cx="100" cy="100" r="80" fill="none" stroke="#4F5BFF" stroke-width="14" stroke-linecap="round" pathLength="1000" style="--to:260" transform="rotate(-90 100 100)"/>
+      <circle cx="100" cy="100" r="54" fill="none" stroke="#232B63" stroke-width="14"/>
+      <circle class="arc" cx="100" cy="100" r="54" fill="none" stroke="#FFB41F" stroke-width="14" stroke-linecap="round" pathLength="1000" style="--to:420" transform="rotate(-90 100 100)"/>
+      <circle cx="100" cy="100" r="28" fill="none" stroke="#232B63" stroke-width="14"/>
+      <circle class="arc" cx="100" cy="100" r="28" fill="none" stroke="#0FA37F" stroke-width="14" stroke-linecap="round" pathLength="1000" style="--to:600" transform="rotate(-90 100 100)"/>
+    </svg>
+  </div>
+  <form class="gate-form" id="loginForm" novalidate>
+    <h2 id="authTitle">Welcome back</h2>
+    <p class="sub" id="authSub">Sign in to pick up where you left off.</p>
+    <div class="tabs" role="tablist" aria-label="Account">
+      <button type="button" class="tab" role="tab" id="tabIn" aria-selected="true">Sign in</button>
+      <button type="button" class="tab" role="tab" id="tabUp" aria-selected="false">Sign up</button>
+    </div>
+    <div class="field"><label for="loginName">Your name</label><input id="loginName" required minlength="2" maxlength="40" placeholder="e.g. Priya" autocomplete="username" autocapitalize="words"></div>
+    <div class="field"><label for="loginPass">Password</label>
+      <div class="pw"><input id="loginPass" type="password" required maxlength="128" placeholder="Your password" autocomplete="current-password">
+        <button type="button" class="pw-toggle" id="pwToggle" aria-label="Show password" aria-pressed="false">Show</button></div>
+      <small class="hint" id="pwHint"></small></div>
+    <div class="field hidden" id="confirmField"><label for="loginPass2">Confirm password</label>
+      <input id="loginPass2" type="password" maxlength="128" placeholder="Type it again" autocomplete="new-password"></div>
+    <div class="ok-msg" id="loginOk" role="status"></div>
+    <div class="err" id="loginErr" role="alert"></div>
+    <button class="btn btn-primary" type="submit" id="authBtn">Sign in</button>
+  </form>
+</section>
+
+<!-- App shell -->
+<div class="app hidden" id="app">
+  <aside class="side" id="side">
+    <div class="brand"><span class="brand-mark">IT</span> Intelligent Tutor</div>
+    <nav id="nav">
+      <button class="nav-btn" data-view="tutor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>Ask the tutor</button>
+      <button class="nav-btn" data-view="practice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>Practice</button>
+      <button class="nav-btn" data-view="mock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Mock test</button>
+      <button class="nav-btn" data-view="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>My progress</button>
+      <button class="nav-btn" data-view="library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM4 19a2 2 0 0 1 2-2h13"/></svg>Library</button>
+      <button class="nav-btn" data-view="plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>Study plan</button>
+    </nav>
+    <div class="side-foot">
+      <div class="who"><div class="avatar" id="avatar">T</div><div><b id="whoName">Learner</b><small id="whoExam">All government exams</small></div></div>
+      <div class="streak"><span>Streak <b id="streakVal">0 days</b></span><span>Today <b id="todayVal">0/20</b></span></div>
+      <button class="link" id="logout">Sign out</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <h2 id="pageTitle">Ask the tutor</h2>
+      </div>
+      <div class="tools">
+        <span class="pill" id="modePill"></span>
+        <span class="pill exam" id="levelTag">Government exam</span>
+      </div>
+    </header>
+
+    <!-- Tutor -->
+    <section class="view" id="view-tutor">
+      <div class="chat" id="chat"></div>
+      <div class="composer">
+        <div class="composer-row">
+          <textarea id="msgInput" rows="1" placeholder="Ask any question, e.g. Explain compound interest with an example"></textarea>
+          <button class="icon-btn" id="micBtn" aria-label="Speak your question"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+          <button class="icon-btn send" id="sendBtn" aria-label="Send"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <small>Answers are for learning. For recent events and exact rules, confirm with the official source.</small>
+      </div>
+    </section>
+
+    <section class="view hidden" id="view-practice"></section>
+    <section class="view hidden" id="view-mock"></section>
+    <section class="view hidden" id="view-progress"></section>
+    <section class="view hidden" id="view-library"></section>
+    <section class="view hidden" id="view-plan"></section>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

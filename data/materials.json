@@ -1,0 +1,36 @@
+[
+{"subject":"Quantitative Aptitude","topics":["Percentage","Profit and Loss","Simple and Compound Interest","Time and Work","Ratio and Proportion","Speed, Time and Distance","Averages","Number Series","Algebra","Number System","Mensuration","Ages"],"items":[
+ {"title":"Quantitative Aptitude for Competitive Examinations (R. S. Aggarwal)","type":"Book","note":"Chapter-wise practice with shortcuts"},
+ {"title":"Class 6-10 Mathematics (NCERT)","type":"Free textbook","url":"https://ncert.nic.in/textbook.php","note":"Builds the base for every aptitude topic"},
+ {"title":"Khan Academy: Arithmetic and Pre-algebra","type":"Video course","url":"https://www.khanacademy.org/math","note":"Step-by-step video explanations"}]},
+{"subject":"Reasoning","topics":["Coding-Decoding","Blood Relations","Direction Sense","Syllogism","Analogy","Classification","Letter Series","Ranking","Clock and Calendar"],"items":[
+ {"title":"A Modern Approach to Verbal and Non-Verbal Reasoning (R. S. Aggarwal)","type":"Book","note":"Covers every reasoning pattern with solved examples"},
+ {"title":"Previous-year SSC CGL and IBPS reasoning papers","type":"Practice","url":"https://ssc.gov.in","note":"Download from the official SSC site"}]},
+{"subject":"English","topics":["Vocabulary","Grammar","Idioms and Phrases","One Word Substitution","Spelling"],"items":[
+ {"title":"High School English Grammar and Composition (Wren and Martin)","type":"Book","note":"The standard reference for grammar"},
+ {"title":"Word Power Made Easy (Norman Lewis)","type":"Book","note":"Vocabulary through roots and prefixes"},
+ {"title":"Read one editorial a day from The Hindu","type":"Habit","note":"Improves comprehension and vocabulary"}]},
+{"subject":"Indian Polity","topics":["Constitution Basics","Fundamental Rights and Duties","Union Government","Local Government"],"items":[
+ {"title":"Indian Polity (M. Laxmikanth)","type":"Book","note":"The core UPSC and State PSC text"},
+ {"title":"Constitution of India (official text)","type":"Primary source","url":"https://legislative.gov.in/constitution-of-india/","note":"Read Articles directly"},
+ {"title":"NCERT Class 11-12 Political Science","type":"Free textbook","url":"https://ncert.nic.in/textbook.php","note":"Simple language foundation"}]},
+{"subject":"History","topics":["Ancient India","Medieval India","Modern India","Freedom Struggle"],"items":[
+ {"title":"A Brief History of Modern India (Spectrum)","type":"Book","note":"Freedom struggle in exam-ready form"},
+ {"title":"NCERT Class 6-12 History","type":"Free textbook","url":"https://ncert.nic.in/textbook.php","note":"Source of most UPSC and TNPSC questions"}]},
+{"subject":"Geography","topics":["Physical Geography","Indian Geography"],"items":[
+ {"title":"Certificate Physical and Human Geography (G. C. Leong)","type":"Book","note":"Concepts explained with diagrams"},
+ {"title":"NCERT Class 11 India: Physical Environment","type":"Free textbook","url":"https://ncert.nic.in/textbook.php","note":"Rivers, soils, climate of India"}]},
+{"subject":"Economy","topics":["Indian Economy Basics","Banking and Finance","Taxation"],"items":[
+ {"title":"Indian Economy (Ramesh Singh)","type":"Book","note":"UPSC-level coverage"},
+ {"title":"RBI Educational Initiatives","type":"Official portal","url":"https://www.rbi.org.in","note":"Banking and monetary policy basics"},
+ {"title":"Economic Survey and Union Budget","type":"Primary source","url":"https://www.indiabudget.gov.in","note":"Latest official figures"}]},
+{"subject":"General Science","topics":["Physics","Chemistry","Biology"],"items":[
+ {"title":"NCERT Science Class 6-10","type":"Free textbook","url":"https://ncert.nic.in/textbook.php","note":"All RRB and SSC science is drawn from here"},
+ {"title":"Lucent's General Science","type":"Book","note":"Quick revision with tables"}]},
+{"subject":"Computer Awareness","topics":["Fundamentals","Internet","Shortcuts"],"items":[
+ {"title":"Computer Awareness (Arihant)","type":"Book","note":"Banking and SSC pattern"},
+ {"title":"NPTEL computer science basics","type":"Video course","url":"https://nptel.ac.in","note":"IIT-level lectures, free"}]},
+{"subject":"Tamil Nadu","topics":["Literature","Geography","History","State Symbols"],"items":[
+ {"title":"Samacheer Kalvi textbooks (Class 6-12)","type":"Free textbook","url":"https://www.tnscert.org","note":"Primary source for TNPSC Group exams"},
+ {"title":"TNPSC syllabus and previous papers","type":"Official portal","url":"https://www.tnpsc.gov.in","note":"Check the latest notification and syllabus"}]}
+]
